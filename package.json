@@ -1,0 +1,12 @@
+{
+  "name": "@lvr/react-coding-challenge",
+  "version": "1.0.0",
+  "description": "React & GraphQL orientated coding challenge for Lithodomos VR developer role applicants.",
+  "repository": "git@github.com:LithodomosVR/react-coding-challenge.git",
+  "author": "Geoff Whatley <me@geoffwhatley.com>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "prettier": "^1.12.1"
+  }
+}
