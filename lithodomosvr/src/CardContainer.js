@@ -10,13 +10,11 @@ class CardContainer extends Component {
   state = { gifs: [], loading: true };
 
   componentDidMount() {
-    console.log("cDM");
-    console.log(process.env);
     axios
       .get(URL, {
         params: {
           api_key: "KdpYtENdZIbVcvy4BGZEDKNameGAKyaw",
-          limit: 18
+          limit: this.props.limit
         }
       })
       .then(res => {
@@ -37,7 +35,7 @@ class CardContainer extends Component {
           key={id}
           slug={slug}
           title={title}
-          image={images.preview}
+          image={images.fixed_height.url}
         />
       );
     });

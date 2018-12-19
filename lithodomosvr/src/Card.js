@@ -2,12 +2,12 @@ import React, { Component } from "react";
 
 class Card extends Component {
   render() {
+    const {title, slug, id, image} = this.props;
     return (
       <div className="Card">
-        {this.props.title}
-        {this.props.slug}
-        {this.props.id}
-        {console.log(this.props.image)}
+        <h3>{title}</h3>
+        <img src={image} alt=""/>
+        <div>{slug}</div>        
       </div>
     );
   }

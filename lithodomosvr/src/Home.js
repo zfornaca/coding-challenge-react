@@ -7,7 +7,7 @@ class Home extends Component {
     return (
       <div className="Home">
         <h2>Featured experiences</h2>
-        <CardContainer />
+        <CardContainer limit={3}/>
         <h6>This is where the link goes</h6>
       </div>
     );
