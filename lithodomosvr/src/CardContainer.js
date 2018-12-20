@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import { Route, Switch } from "react-router-dom";
 import axios from "axios";
 import Card from "./Card";
+import { Query } from "react-apollo";
+import gql from "graphql-tag";
 
 const API_KEY = process.env.REACT_APP_CODE;
 const URL = "https://api.giphy.com/v1/gifs/";
@@ -20,8 +21,6 @@ class CardContainer extends Component {
         }
       })
       .then(res => {
-        console.log("promise then");
-        console.log(res.data.data);
         this.setState({ gifs: res.data.data, loading: false });
       });
   }
