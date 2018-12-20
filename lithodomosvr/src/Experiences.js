@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
-import CardContainer from "./CardContainer";
+import GCardContainer from "./GraphQLCardContainer";
 
 class Experiences extends Component {
   render() {
     return (
       <div className="Experiences">
         <h2>Experience Library</h2>
-        <CardContainer limit={18}/>
+        <GCardContainer limit={18} />
       </div>
     );
   }
