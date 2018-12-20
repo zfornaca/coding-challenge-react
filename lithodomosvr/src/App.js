@@ -3,8 +3,8 @@ import logo from "./logo_full.svg";
 import "./App.css";
 import { Route, Switch } from "react-router-dom";
 import Home from "./Home";
-// import Experience from "./Experience";
-// import Experiences from "./Experiences";
+import SingleExperience from "./SingleExperience";
+import Experiences from "./Experiences";
 
 class App extends Component {
   render() {
@@ -13,8 +13,8 @@ class App extends Component {
         <img src={logo} alt="" />
         <Switch>
           <Route exact path="/" component={Home} />
-          {/* <Route path="/experiences/:experienceId" component={Experience} />
-          <Route path="/experiences/" component={Experiences} /> */}
+          <Route exact path="/experiences/" component={Experiences} />
+          <Route path="/experience/:experienceId" component={SingleExperience} />
         </Switch>
       </div>
     );

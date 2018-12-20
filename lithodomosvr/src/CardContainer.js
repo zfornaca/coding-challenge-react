@@ -4,14 +4,16 @@ import axios from "axios";
 import Card from "./Card";
 
 const API_KEY = process.env.REACT_APP_CODE;
-const URL = "https://api.giphy.com/v1/gifs/trending";
+const URL = "https://api.giphy.com/v1/gifs/";
+// const SINGLE_URL = "https://api.giphy.com/v1/gifs/"
 
 class CardContainer extends Component {
   state = { gifs: [], loading: true };
 
   componentDidMount() {
+    const ENDPOINT = this.props.id ? this.props.id : "trending";
     axios
-      .get(URL, {
+      .get(`${URL}${ENDPOINT}`, {
         params: {
           api_key: "KdpYtENdZIbVcvy4BGZEDKNameGAKyaw",
           limit: this.props.limit
