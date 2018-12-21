@@ -7,7 +7,7 @@ class Experiences extends Component {
     return (
       <div className="Experiences">
         <h2>Experience Library</h2>
-        <GCardContainer limit={18} />
+           <GCardContainer limit={18} />
       </div>
     );
   }

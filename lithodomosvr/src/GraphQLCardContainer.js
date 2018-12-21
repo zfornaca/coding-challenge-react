@@ -23,10 +23,10 @@ const GET_EXERIENCES = gql`
     }
   }
 `;
-
-const GET_SINGLE_EXPERIENCE = gql`
+// "5bf5da707c04b3000744a098"
+const GET_SINGLE_EXPERIENCE = id => gql`
   {
-    getPublicPlaylist(input: { playlistID: "5bf5da707c04b3000744a098" }) {
+    getPublicPlaylist(input: { playlistID: "${id}" }) {
       id
       name
       tagline
@@ -46,7 +46,7 @@ const GET_SINGLE_EXPERIENCE = gql`
 `;
 
 const GCardContainer = props => (
-  <Query query={props.id ? GET_SINGLE_EXPERIENCE : GET_EXERIENCES}>
+  <Query query={props.id ? GET_SINGLE_EXPERIENCE(props.id) : GET_EXERIENCES}>
     {({ loading, error, data }) => {
       if (loading) return <p>Loading!</p>;
       if (error) return <p>Error</p>;
